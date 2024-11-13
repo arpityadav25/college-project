@@ -9,10 +9,10 @@ body {
   height: 100%;
 }
 
-@media only screen and (min-width: 455px) {
+/* @media only screen and (min-width: 455px) {
   body {
     background-color: blue;
-  }
+  } */
 }
 .container {
   display: flex;
@@ -21,14 +21,39 @@ body {
 
   height: 100vh;
 }
-
+/* .base::before {
+  content: "";
+  background-color: red;
+  width: 100em;
+  margin-right: 5em;
+  height: 10%;
+  border-radius: 20px;
+} */
+.base::before {
+  content: "";
+  position: absolute; /* Add this */
+  background-color: rgb(249, 247, 247);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 17%;
+  border-radius: 70px;
+  z-index: 1;
+  transform: translateY(-10px); /* Ensure it is behind the .base element */
+}
 .base {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   background-color: rgb(201, 171, 171);
   margin: auto;
-  margin-top: 2.5em;
-  width: 85vw;
+  margin-top: 1.5em;
+  width: 97vw;
   font-size: 1rem;
-  height: 90vh;
+  height: 95vh;
+}
+.upperhalf {
+  background-color: rgb(22, 203, 143);
+}
+.lowerhalf {
+  background-color: rgb(158, 203, 22);
 }
