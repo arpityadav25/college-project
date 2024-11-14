@@ -13,33 +13,28 @@ body {
   body {
     background-color: blue;
   } */
-}
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 100vh;
 }
-/* .base::before {
-  content: "";
-  background-color: red;
-  width: 100em;
-  margin-right: 5em;
-  height: 10%;
-  border-radius: 20px;
-} */
+
 .base::before {
   content: "";
-  position: absolute; /* Add this */
-  background-color: rgb(249, 247, 247);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 17%;
-  border-radius: 70px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  /* top: 0;
+  left: 0; */
+  margin-left: 3.2rem;
+  width: 90%;
+  height: 8%;
+  border-top-left-radius: 0; /* Top-left corner */
+  border-top-right-radius: 0; /* Top-right corner */
+  border-bottom-right-radius: 50px; /* Bottom-right corner */
+  border-bottom-left-radius: 50px; /* Bottom-left corner */
   z-index: 1;
-  transform: translateY(-10px); /* Ensure it is behind the .base element */
+  transform: translateY(-10px);
 }
 .base {
   display: grid;
@@ -47,7 +42,7 @@ body {
   background-color: rgb(201, 171, 171);
   margin: auto;
   margin-top: 1.5em;
-  width: 97vw;
+  width: 98vw;
   font-size: 1rem;
   height: 95vh;
 }
@@ -55,5 +50,39 @@ body {
   background-color: rgb(22, 203, 143);
 }
 .lowerhalf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(158, 203, 22);
+}
+.destinations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  width: 84rem;
+  height: 95%;
+}
+.element-1,
+.element-2,
+.element-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 25rem;
+  height: 95%;
+  border-radius: 10px;
+}
+ul li {
+  margin: 1rem;
+}
+.element-1 {
+  background-color: rgb(114, 49, 49);
+}
+.element-2 {
+  background-color: aquamarine;
+}
+.element-3 {
+  background-color: burlywood;
 }
