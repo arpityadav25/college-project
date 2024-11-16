@@ -2,6 +2,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -20,18 +22,6 @@ body {
   height: 100vh;
 }
 
-.base::before {
-  content: "";
-  position: absolute; /* Position relative to .base */
-  top: 0; /* Start at the top of .base */
-  left: 3.2rem; /* Align horizontally as per your design */
-  width: calc(100% - 6.4rem); /* Account for left and right offsets */
-  height: 8%; /* Keep the height of the navigation bar */
-  background-color: rgb(255, 255, 255); /* Your chosen background color */
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  z-index: 1; /* Ensure it appears behind content in .base */
-}
 .nav-icons {
   position: absolute;
   top: 0; /* Align with the pseudo-element */
@@ -43,7 +33,7 @@ body {
   align-items: center; /* Center icons vertically */
   z-index: 2; /* Ensure it appears above the pseudo-element */
 }
-button {
+.nav-item {
   border: none;
   background: none;
   font-size: 1em;
@@ -53,46 +43,61 @@ button {
 .base {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  background-color: rgb(201, 171, 171);
+  background-image: url(images/baseimage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: auto;
   margin-top: 1.5em;
   width: 98vw;
   font-size: 1rem;
   height: 95vh;
 }
+.base::before {
+  content: "";
+  position: absolute; /* Position relative to .base */
+  top: 0; /* Start at the top of .base */
+  left: 3.2rem; /* Align horizontally as per your design */
+  width: calc(100% - 6.4rem); /* Account for left and right offsets */
+  height: 8%; /* Keep the height of the navigation bar */
+  background-color: rgb(255, 255, 255); /* Your chosen background color */
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  z-index: 1;
+}
 .upperhalf {
-  background-color: rgb(22, 203, 143);
 }
 .lowerhalf {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 1rem;
-  background-color: rgb(158, 203, 22);
+}
+.scroll-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: aliceblue;
 }
 .destinations {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping */
-  justify-content: flex-start; /* Align items to the left */
+  flex-wrap: nowrap;
+  justify-content: flex-start;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
-  background-color: aliceblue;
-  width: 89rem;
+  width: 84rem;
   height: 95%;
-  padding-left: 1rem; /* Remove extra padding */
+  padding-left: 0.1rem;
   scroll-behavior: smooth; /* Smooth scrolling */
+  scrollbar-width: none;
 }
-.element-1,
-.element-2,
-.element-3,
-.element-4,
-.element-5,
-.element-6,
-.element-7,
-.element-8,
-.element-9,
-.element-10 {
+
+.destinations::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+ul li {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -101,36 +106,69 @@ button {
   height: 95%;
   border-radius: 10px;
   flex-shrink: 0;
-  margin: 1rem;
+  margin: 0.5rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+ul li:hover {
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+.read-more {
+  background: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(19, 19, 19);
 }
 
 .element-1 {
-  background-color: rgb(114, 49, 49);
+  background-image: url(images/tokyo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-2 {
-  background-color: aquamarine;
+  background-image: url(images/norway.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-3 {
-  background-color: burlywood;
+  background-image: url(images/france.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-4 {
-  background-color: black;
+  background-image: url(images/iceland.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-5 {
-  background-color: rgb(75, 111, 24);
+  background-image: url(images/canada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-6 {
-  background-color: rgb(121, 181, 179);
+  background-image: url(images/italy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-7 {
-  background-color: rgb(238, 190, 100);
+  background-image: url(images/greece.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-8 {
-  background-color: rgb(107, 12, 99);
+  background-image: url(images/newzealand.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-9 {
-  background-color: rgb(239, 31, 52);
+  background-image: url(images/switzerland.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element-10 {
-  background-color: rgb(244, 244, 14);
+  background-image: url(images/australia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
