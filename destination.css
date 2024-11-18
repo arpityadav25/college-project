@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+@font-face {
+  font-family: "Blending";
+  src: url(fonts/Blending-rgjzK.otf) format(opentype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url(fonts/leaguespartan-bold.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.nav-icons {
+  position: absolute;
+  top: 0; /* Align with the pseudo-element */
+  left: 3.2rem; /* Same offset as .base::before */
+  width: calc(100% - 6.4rem); /* Match the pseudo-element width */
+  height: 8%;
+  display: flex;
+  justify-content: space-around; /* Space icons evenly */
+  align-items: center; /* Center icons vertically */
+  z-index: 2; /* Ensure it appears above the pseudo-element */
+}
+.nav-item {
+  font-family: "Blending", sans-serif;
+  border: none;
+  background: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: rgb(65, 71, 91);
+}
+.base {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  margin-top: 1.5em;
+  width: 99vw;
+  font-size: 1rem;
+  height: 96vh;
+  background-image: url(travel.jpg);
+}
+.base::before {
+  content: "";
+  position: absolute; /* Position relative to .base */
+  top: 0; /* Start at the top of .base */
+  left: 3.2rem; /* Align horizontally as per your design */
+  width: calc(100% - 6.4rem); /* Account for left and right offsets */
+  height: 8%; /* Keep the height of the navigation bar */
+  background-color: rgb(255, 255, 255); /* Your chosen background color */
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  z-index: 1;
+}
+.lefthalf {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.dest-image {
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  background-image: url(japan.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 95%;
+  height: 85%;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  border-radius: 20px;
+}
+.data {
+  font-family: "LeagueSpartan", sans-serif;
+  font-weight: bold;
+  background-color: rgba(215, 250, 250, 0.644);
+  color: rgb(66, 99, 102);
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 50%;
+  height: 50%;
+  margin-left: 2rem;
+  border-radius: 20px;
+}
+.capital {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.distance {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.language {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.righthalf {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 1rem;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: rgb(215, 250, 250);
+}
+#description {
+  font-family: "LeagueSpartan", sans-serif;
+  background-color: rgba(113, 145, 145, 0.644);
+  color: rgb(215, 250, 250);
+  grid-row: span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 97%;
+  padding: 1rem;
+  border-radius: 25px;
+}
