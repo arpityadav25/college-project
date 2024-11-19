@@ -42,14 +42,14 @@ body {
 
 .nav-icons {
   position: absolute;
-  top: 0; /* Align with the pseudo-element */
-  left: 3.2rem; /* Same offset as .base::before */
-  width: calc(100% - 6.4rem); /* Match the pseudo-element width */
+  top: 0;
+  left: 3.2rem;
+  width: calc(100% - 6.4rem);
   height: 8%;
   display: flex;
-  justify-content: space-around; /* Space icons evenly */
-  align-items: center; /* Center icons vertically */
-  z-index: 2; /* Ensure it appears above the pseudo-element */
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2;
 }
 .nav-item {
   font-family: "Blending", sans-serif;
@@ -73,12 +73,12 @@ body {
 }
 .base::before {
   content: "";
-  position: absolute; /* Position relative to .base */
-  top: 0; /* Start at the top of .base */
-  left: 3.2rem; /* Align horizontally as per your design */
-  width: calc(100% - 6.4rem); /* Account for left and right offsets */
-  height: 8%; /* Keep the height of the navigation bar */
-  background-color: rgb(255, 255, 255); /* Your chosen background color */
+  position: absolute;
+  top: 0;
+  left: 3.2rem;
+  width: calc(100% - 6.4rem);
+  height: 8%;
+  background-color: rgb(255, 255, 255);
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   z-index: 1;
@@ -115,12 +115,12 @@ body {
   width: 84rem;
   height: 95%;
   padding-left: 0.1rem;
-  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-behavior: smooth;
   scrollbar-width: none;
 }
 
 .destinations::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Edge */
+  display: none;
 }
 ul li {
   display: grid;
@@ -139,7 +139,7 @@ ul li:hover {
   transition: 0.4s;
 }
 .element-1 {
-  background-image: url(images/tokyo.jpg);
+  background-image: url(images/japan.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
